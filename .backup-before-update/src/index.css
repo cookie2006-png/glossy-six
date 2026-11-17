@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body { @apply bg-petal font-body text-berry antialiased; }
+  h1, h2, h3 { @apply font-display; }
+  :focus-visible { @apply outline outline-2 outline-offset-2 outline-rose; }
+}
+
+@layer components {
+  .btn { @apply inline-block rounded-full px-6 py-3 font-medium transition-colors; }
+  .btn-primary { @apply bg-rose text-white hover:bg-berry; }
+  .btn-soft { @apply bg-blush text-berry hover:bg-nude; }
+}
+
+/* One memorable moment: the nails settle in on page load */
+@keyframes settle { from { transform: translateY(14px) rotate(var(--r)); opacity: 0; } to { transform: translateY(0) rotate(var(--r)); opacity: 1; } }
+.nail { animation: settle .7s ease-out both; }
+@media (prefers-reduced-motion: reduce) { .nail { animation: none; } }
+
+/* Home page extras */
+@keyframes twinkle { 0%,100% { opacity: .2; transform: scale(.8); } 50% { opacity: 1; transform: scale(1.15); } }
+.sparkle { animation: twinkle 3s ease-in-out infinite; }
+@keyframes marquee { to { transform: translateX(-50%); } }
+.marquee { animation: marquee 22s linear infinite; }
+@media (prefers-reduced-motion: reduce) { .sparkle, .marquee { animation: none; } }
+
+/* Print only the receipt */
+@media print {
+  body * { visibility: hidden; }
+  .print-area, .print-area * { visibility: visible; }
+  .print-area { position: absolute; left: 0; top: 0; width: 100%; }
+}
