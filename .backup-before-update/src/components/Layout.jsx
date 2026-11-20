@@ -68,6 +68,7 @@ export default function Layout({ children }) {
           </div>
         </div>
         <p className="border-t border-blush py-4 text-center text-sm">
+          {import.meta.env.VITE_DEMO === "true" && <span className="mb-1 block">Demo site: bookings and reviews are saved only in your own browser.</span>}
           © {new Date().getFullYear()} {business.name} · <Link to="/admin" className="underline">Admin</Link>
         </p>
       </footer>

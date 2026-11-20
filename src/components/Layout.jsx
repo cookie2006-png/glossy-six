@@ -58,7 +58,7 @@ export default function Layout({ children }) {
             <p className="mt-2 max-w-xs">Your beauty, your style, your shine. Home service available.</p>
           </div>
           <div className="space-y-1">
-            <p><a className="underline" href={`mailto:${business.email}`}>{business.email}</a></p>
+            <p><a className="underline" href={business.gmailLink} target="_blank" rel="noreferrer">{business.email}</a></p>
             <p>{business.address}</p>
             <p className="flex gap-4 pt-2">
               {business.socials.map((s) => (

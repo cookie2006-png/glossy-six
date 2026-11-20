@@ -2,6 +2,8 @@
 export const business = {
   name: "Nails by Glossy Six",
   email: "glossysix06@gmail.com",
+  // Opens Gmail directly (instead of the default mail app such as Outlook)
+  gmailLink: "https://mail.google.com/mail/?view=cm&fs=1&to=glossysix06@gmail.com&su=Nail%20booking%20inquiry",
   address: "632 Blvd Street, San Agustin, City of San Fernando, Pampanga",
   // Used by the map on the Contact page. Edit if the pin is off.
   mapQuery: "San Agustin, City of San Fernando, Pampanga, Philippines",

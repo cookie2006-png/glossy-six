@@ -67,3 +67,12 @@ export const categories = [
 export const services = categories.flatMap((c) => c.items.map((i) => ({ ...i, category: c.title })));
 export const logo = img("logo");
 export const gallery = ["gel-custom", "art-detailed", "gel-chrome", "art-seasonal", "builder-color", "art-simple", "gel-french", "builder-design"].map(img);
+
+// Sample 5-star reviews. They only fill empty space beside the review form:
+// real (approved) customer reviews replace them automatically. Edit or delete as you like.
+export const sampleReviews = [
+  { id: "s1", name: "Maria S.", rating: 5, sample: true, comment: "So pretty and so affordable! My French tips lasted for weeks." },
+  { id: "s2", name: "Jen D.", rating: 5, sample: true, comment: "They made my design exactly how I imagined it. Love it!" },
+  { id: "s3", name: "Kyla R.", rating: 5, sample: true, comment: "Friendly girls and a very clean setup. Will book again!" },
+  { id: "s4", name: "Angel M.", rating: 5, sample: true, comment: "My builder gel set is strong, glossy and so cute." },
+];

@@ -35,7 +35,7 @@ export default function Contact() {
         <dl className="mt-6 space-y-4">
           <div>
             <dt className="font-script text-2xl text-rose">Email</dt>
-            <dd><a className="underline" href={`mailto:${business.email}`}>{business.email}</a></dd>
+            <dd><a className="underline" href={business.gmailLink} target="_blank" rel="noreferrer">{business.email}</a></dd>
           </div>
           <div>
             <dt className="font-script text-2xl text-rose">Location</dt>
